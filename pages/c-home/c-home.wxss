@@ -1,0 +1,55 @@
+.page { background: #FAFAFA; padding-bottom: 120rpx; }
+
+.banner {
+  background: linear-gradient(135deg, #C4A882 0%, #D4BFA6 100%);
+  padding: 80rpx 40rpx 60rpx;
+  border-radius: 0 0 40rpx 40rpx;
+}
+.banner-title { display: block; font-size: 48rpx; font-weight: 700; color: #fff; }
+.banner-sub { display: block; font-size: 26rpx; color: rgba(255,255,255,0.8); margin-top: 8rpx; }
+.banner-btn {
+  display: inline-block;
+  margin-top: 24rpx;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 12rpx 32rpx;
+  border-radius: 24rpx;
+  font-size: 26rpx;
+}
+
+.section { padding: 32rpx 32rpx 0; }
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20rpx; }
+.section-title { font-size: 30rpx; font-weight: 600; color: #1A1A1A; }
+.section-more { font-size: 26rpx; color: #C4A882; }
+
+.scroll-row { white-space: nowrap; }
+.service-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 28rpx 32rpx;
+  margin-right: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+  min-width: 160rpx;
+}
+.sc-icon { font-size: 44rpx; margin-bottom: 12rpx; }
+.sc-name { font-size: 26rpx; color: #1A1A1A; margin-bottom: 8rpx; }
+.sc-price { font-size: 28rpx; color: #C4A882; font-weight: 600; }
+
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16rpx; }
+.gallery-item {
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+}
+.gallery-img { height: 240rpx; }
+.gallery-name { padding: 16rpx 20rpx; font-size: 26rpx; color: #1A1A1A; display: block; }
+
+.about-text { font-size: 26rpx; color: #888; line-height: 1.6; display: block; margin-bottom: 28rpx; }
+.about-stats { display: flex; justify-content: space-around; }
+.stat-item { display: flex; flex-direction: column; align-items: center; }
+.stat-num { font-size: 36rpx; font-weight: 700; color: #C4A882; }
+.stat-label { font-size: 22rpx; color: #888; margin-top: 6rpx; }

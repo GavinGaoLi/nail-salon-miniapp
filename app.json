@@ -1,57 +1,71 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/booking/booking",
-    "pages/customers/customers",
-    "pages/inventory/inventory",
-    "pages/statistics/statistics",
-    "pages/profile/profile"
+    "pages/startup/startup",
+    "pages/c-home/c-home",
+    "pages/c-book/c-book",
+    "pages/c-service/c-service",
+    "pages/c-mine/c-mine",
+    "pages/a-dashboard/a-dashboard",
+    "pages/a-booking/a-booking",
+    "pages/a-customers/a-customers",
+    "pages/a-projects/a-projects",
+    "pages/a-stats/a-stats",
+    "pages/a-settings/a-settings"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#E8879B",
-    "navigationBarTitleText": "美甲时光",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#FFF5F7",
-    "backgroundTextStyle": "dark"
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "NAIL STUDIO",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FAFAFA"
   },
   "tabBar": {
-    "color": "#999999",
-    "selectedColor": "#E8879B",
+    "color": "#BBBBBB",
+    "selectedColor": "#C4A882",
     "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/c-home/c-home",
         "text": "首页",
         "iconPath": "images/tab-home.png",
         "selectedIconPath": "images/tab-home-active.png"
       },
       {
-        "pagePath": "pages/booking/booking",
+        "pagePath": "pages/c-book/c-book",
         "text": "预约",
-        "iconPath": "images/tab-booking.png",
-        "selectedIconPath": "images/tab-booking-active.png"
+        "iconPath": "images/tab-book.png",
+        "selectedIconPath": "images/tab-book-active.png"
       },
       {
-        "pagePath": "pages/customers/customers",
-        "text": "客户",
-        "iconPath": "images/tab-customer.png",
-        "selectedIconPath": "images/tab-customer-active.png"
+        "pagePath": "pages/c-service/c-service",
+        "text": "服务",
+        "iconPath": "images/tab-service.png",
+        "selectedIconPath": "images/tab-service-active.png"
       },
       {
-        "pagePath": "pages/inventory/inventory",
-        "text": "库存",
-        "iconPath": "images/tab-inventory.png",
-        "selectedIconPath": "images/tab-inventory-active.png"
-      },
-      {
-        "pagePath": "pages/statistics/statistics",
-        "text": "统计",
-        "iconPath": "images/tab-stats.png",
-        "selectedIconPath": "images/tab-stats-active.png"
+        "pagePath": "pages/c-mine/c-mine",
+        "text": "我的",
+        "iconPath": "images/tab-mine.png",
+        "selectedIconPath": "images/tab-mine-active.png"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,40 @@
+.page { background: #FAFAFA; min-height: 100vh; padding-bottom: 40rpx; }
+
+.header {
+  background: #fff; padding: 60rpx 32rpx 28rpx;
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.header-title { font-size: 36rpx; font-weight: 700; color: #1A1A1A; }
+.header-date { font-size: 24rpx; color: #888; }
+
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16rpx; padding: 24rpx 32rpx; }
+.stat-card {
+  background: #fff; border-radius: 16rpx; padding: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+}
+.stat-num { font-size: 40rpx; font-weight: 700; color: #C4A882; display: block; }
+.stat-label { font-size: 24rpx; color: #888; margin-top: 6rpx; display: block; }
+
+.section { padding: 0 32rpx; margin-top: 24rpx; }
+.section-title { font-size: 28rpx; font-weight: 600; color: #1A1A1A; margin-bottom: 16rpx; display: block; }
+
+.booking-card { margin-bottom: 12rpx; }
+.bc-top { display: flex; justify-content: space-between; }
+.bc-name { font-size: 28rpx; font-weight: 600; color: #1A1A1A; }
+.bc-time { font-size: 26rpx; color: #888; }
+.bc-service { font-size: 24rpx; color: #666; margin: 8rpx 0; display: block; }
+.bc-bottom { display: flex; justify-content: space-between; align-items: center; }
+.bc-price { font-size: 28rpx; color: #C4A882; font-weight: 600; }
+
+.admin-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16rpx; }
+.admin-item {
+  background: #fff; border-radius: 16rpx; padding: 28rpx 16rpx;
+  display: flex; flex-direction: column; align-items: center; gap: 12rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+}
+.ai-icon-wrap {
+  width: 64rpx; height: 64rpx; border-radius: 16rpx;
+  display: flex; align-items: center; justify-content: center;
+}
+.ai-icon { font-size: 28rpx; }
+.ai-text { font-size: 24rpx; color: #1A1A1A; }

@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="list">
+    <view class="card project-item" wx:for="{{projects}}" wx:key="id">
+      <view class="pi-left">
+        <view class="pi-icon-wrap" style="background:{{item.bg}}">
+          <text class="pi-icon">{{item.icon}}</text>
+        </view>
+        <view class="pi-info">
+          <text class="pi-name">{{item.name}}</text>
+          <text class="pi-desc">{{item.desc}}</text>
+          <text class="pi-time">{{item.duration}}分钟</text>
+        </view>
+      </view>
+      <view class="pi-right">
+        <text class="pi-price">¥{{item.price}}</text>
+        <view class="pi-edit" bindtap="editProject" data-id="{{item.id}}">编辑</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fab" bindtap="addProject">
+    <text class="fab-icon">+</text>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+.page { background: #FAFAFA; min-height: 100vh; }
+
+.period-bar {
+  display: flex; background: #fff; padding: 16rpx 32rpx; gap: 16rpx;
+}
+.period-item {
+  flex: 1; text-align: center; padding: 12rpx 0; border-radius: 24rpx;
+  font-size: 26rpx; color: #888; background: #F5F5F5;
+}
+.period-item.active { background: #C4A882; color: #fff; }
+
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16rpx; padding: 24rpx 32rpx; }
+.stat-card {
+  background: #fff; border-radius: 16rpx; padding: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+}
+.stat-num { font-size: 36rpx; font-weight: 700; color: #C4A882; display: block; }
+.stat-label { font-size: 24rpx; color: #888; margin-top: 6rpx; display: block; }
+
+.section { padding: 0 32rpx; margin-top: 16rpx; }
+.section-title { font-size: 28rpx; font-weight: 600; color: #1A1A1A; margin-bottom: 16rpx; display: block; }
+
+.ts-row { display: flex; justify-content: space-between; margin-bottom: 12rpx; }
+.ts-name { font-size: 26rpx; color: #1A1A1A; flex: 1; }
+.ts-count { font-size: 24rpx; color: #888; margin-right: 20rpx; }
+.ts-revenue { font-size: 26rpx; color: #C4A882; font-weight: 600; }
+.ts-bar-bg { height: 8rpx; background: #F5F5F5; border-radius: 4rpx; }
+.ts-bar { height: 100%; background: #C4A882; border-radius: 4rpx; }

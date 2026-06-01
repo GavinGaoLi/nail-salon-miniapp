@@ -1,0 +1,58 @@
+<view class="page">
+  <view class="header">
+    <text class="header-title">店铺管理</text>
+    <text class="header-date">{{today}}</text>
+  </view>
+
+  <!-- Stats Grid -->
+  <view class="stats-grid">
+    <view class="stat-card">
+      <text class="stat-num">{{todayOrders}}</text>
+      <text class="stat-label">今日预约</text>
+    </view>
+    <view class="stat-card">
+      <text class="stat-num">¥{{todayIncome}}</text>
+      <text class="stat-label">今日收入</text>
+    </view>
+    <view class="stat-card">
+      <text class="stat-num">{{totalCustomers}}</text>
+      <text class="stat-label">客户总数</text>
+    </view>
+    <view class="stat-card">
+      <text class="stat-num">{{pendingOrders}}</text>
+      <text class="stat-label">待确认</text>
+    </view>
+  </view>
+
+  <!-- Today's Bookings -->
+  <view class="section">
+    <text class="section-title">今日预约</text>
+    <view class="card booking-card" wx:for="{{todayList}}" wx:key="id">
+      <view class="bc-top">
+        <text class="bc-name">{{item.customer}}</text>
+        <text class="bc-time">{{item.time}}</text>
+      </view>
+      <text class="bc-service">{{item.service}}</text>
+      <view class="bc-bottom">
+        <text class="bc-price">¥{{item.price}}</text>
+        <text class="tag {{item.status==='confirmed'?'tag-success':'tag-warning'}}">{{item.statusText}}</text>
+      </view>
+    </view>
+    <view class="empty" wx:if="{{todayList.length===0}}">
+      <text class="empty-text">今日暂无预约</text>
+    </view>
+  </view>
+
+  <!-- Admin Menu -->
+  <view class="section">
+    <text class="section-title">管理功能</text>
+    <view class="admin-grid">
+      <view class="admin-item" wx:for="{{adminMenus}}" wx:key="path" bindtap="goPage" data-url="{{item.path}}">
+        <view class="ai-icon-wrap" style="background:{{item.bg}}">
+          <text class="ai-icon">{{item.icon}}</text>
+        </view>
+        <text class="ai-text">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

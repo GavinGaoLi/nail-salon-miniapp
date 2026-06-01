@@ -1,0 +1,24 @@
+.page { background: #FAFAFA; min-height: 100vh; padding-bottom: 120rpx; }
+.list { padding: 24rpx 32rpx; }
+.project-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12rpx; }
+.pi-left { display: flex; align-items: center; gap: 20rpx; flex: 1; }
+.pi-icon-wrap {
+  width: 72rpx; height: 72rpx; border-radius: 16rpx;
+  display: flex; align-items: center; justify-content: center;
+}
+.pi-icon { font-size: 32rpx; }
+.pi-name { font-size: 28rpx; font-weight: 600; color: #1A1A1A; display: block; }
+.pi-desc { font-size: 24rpx; color: #888; margin-top: 4rpx; display: block; }
+.pi-time { font-size: 22rpx; color: #BBB; margin-top: 4rpx; display: block; }
+.pi-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12rpx; }
+.pi-price { font-size: 30rpx; color: #C4A882; font-weight: 600; }
+.pi-edit { font-size: 24rpx; color: #C4A882; }
+
+.fab {
+  position: fixed; bottom: 48rpx; right: 48rpx;
+  width: 96rpx; height: 96rpx; border-radius: 50%;
+  background: #C4A882; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(196,168,130,0.4);
+}
+.fab-icon { font-size: 48rpx; font-weight: 300; }

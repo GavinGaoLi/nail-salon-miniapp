@@ -1,0 +1,91 @@
+<view class="page">
+  <!-- Steps -->
+  <view class="steps">
+    <view class="step {{step>=1?'active':''}}">
+      <view class="step-dot">1</view>
+      <text class="step-text">选服务</text>
+    </view>
+    <view class="step-line {{step>=2?'active':''}}"></view>
+    <view class="step {{step>=2?'active':''}}">
+      <view class="step-dot">2</view>
+      <text class="step-text">选时间</text>
+    </view>
+    <view class="step-line {{step>=3?'active':''}}"></view>
+    <view class="step {{step>=3?'active':''}}">
+      <view class="step-dot">3</view>
+      <text class="step-text">确认</text>
+    </view>
+  </view>
+
+  <!-- Step 1: Select Service -->
+  <view wx:if="{{step===1}}" class="content">
+    <text class="section-title">选择服务</text>
+    <view class="service-list">
+      <view class="service-item {{selectedService===item.id?'selected':''}}"
+            wx:for="{{services}}" wx:key="id" bindtap="selectService" data-id="{{item.id}}">
+        <view class="si-info">
+          <text class="si-name">{{item.name}}</text>
+          <text class="si-time">约{{item.duration}}分钟</text>
+        </view>
+        <text class="si-price">¥{{item.price}}</text>
+      </view>
+    </view>
+    <view class="btn-primary" bindtap="nextStep">下一步</view>
+  </view>
+
+  <!-- Step 2: Select Time -->
+  <view wx:if="{{step===2}}" class="content">
+    <text class="section-title">选择日期</text>
+    <scroll-view scroll-x class="date-scroll">
+      <view class="date-item {{selectedDate===item.date?'selected':''}}"
+            wx:for="{{dates}}" wx:key="date" bindtap="selectDate" data-date="{{item.date}}">
+        <text class="date-week">{{item.week}}</text>
+        <text class="date-day">{{item.day}}</text>
+      </view>
+    </scroll-view>
+
+    <text class="section-title">选择时间</text>
+    <view class="time-grid">
+      <view class="time-item {{selectedTime===item?'selected':''}}"
+            wx:for="{{times}}" wx:key="*this" bindtap="selectTime" data-time="{{item}}">
+        {{item}}
+      </view>
+    </view>
+
+    <view class="btn-row">
+      <view class="btn-secondary" bindtap="prevStep">上一步</view>
+      <view class="btn-primary flex-2" bindtap="nextStep">下一步</view>
+    </view>
+  </view>
+
+  <!-- Step 3: Confirm -->
+  <view wx:if="{{step===3}}" class="content">
+    <view class="card confirm-card">
+      <view class="cf-row">
+        <text class="cf-label">服务</text>
+        <text class="cf-value">{{selectedServiceName}}</text>
+      </view>
+      <view class="cf-row">
+        <text class="cf-label">日期</text>
+        <text class="cf-value">{{selectedDate}}</text>
+      </view>
+      <view class="cf-row">
+        <text class="cf-label">时间</text>
+        <text class="cf-value">{{selectedTime}}</text>
+      </view>
+      <view class="cf-row last">
+        <text class="cf-label">费用</text>
+        <text class="cf-value price">¥{{selectedServicePrice}}</text>
+      </view>
+    </view>
+
+    <text class="section-title">联系方式</text>
+    <input class="input" placeholder="手机号（用于接收预约提醒）" bindinput="inputPhone" value="{{phone}}" type="number" maxlength="11"/>
+    <textarea class="textarea" placeholder="备注（可选）" bindinput="inputNote" value="{{note}}"/>
+
+    <view class="btn-row">
+      <view class="btn-secondary" bindtap="prevStep">上一步</view>
+      <view class="btn-primary flex-2" bindtap="submitBooking">确认预约</view>
+    </view>
+  </view>
+</view>

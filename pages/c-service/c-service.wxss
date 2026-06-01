@@ -1,0 +1,29 @@
+.page { background: #FAFAFA; min-height: 100vh; padding-bottom: 120rpx; }
+
+.search-bar { padding: 24rpx 32rpx; background: #fff; }
+.search-input {
+  background: #F5F5F5; border-radius: 24rpx; padding: 16rpx 28rpx;
+  font-size: 28rpx;
+}
+
+.service-list { padding: 24rpx 32rpx; }
+.service-card {
+  background: #fff; border-radius: 16rpx; padding: 28rpx;
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16rpx; box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+}
+.sc-left { display: flex; align-items: center; flex: 1; }
+.sc-icon-wrap {
+  width: 80rpx; height: 80rpx; border-radius: 16rpx;
+  display: flex; align-items: center; justify-content: center; margin-right: 24rpx;
+}
+.sc-icon { font-size: 36rpx; }
+.sc-name { font-size: 28rpx; font-weight: 600; color: #1A1A1A; display: block; }
+.sc-desc { font-size: 24rpx; color: #888; margin-top: 4rpx; display: block; }
+.sc-time { font-size: 22rpx; color: #BBB; margin-top: 4rpx; display: block; }
+.sc-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12rpx; }
+.sc-price { font-size: 32rpx; font-weight: 700; color: #C4A882; }
+.sc-book-btn {
+  background: #C4A882; color: #fff; border-radius: 20rpx;
+  padding: 8rpx 24rpx; font-size: 24rpx;
+}

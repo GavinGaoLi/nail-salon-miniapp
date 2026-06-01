@@ -1,0 +1,15 @@
+.page { background: #FAFAFA; min-height: 100vh; padding: 24rpx 32rpx; }
+.menu-card { margin-bottom: 24rpx; }
+.menu-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 28rpx 0; border-bottom: 1rpx solid #F5F5F5;
+}
+.menu-item:last-child { border-bottom: none; }
+.mi-label { font-size: 28rpx; color: #1A1A1A; }
+.mi-value { font-size: 26rpx; color: #888; }
+.mi-arrow { font-size: 32rpx; color: #CCC; }
+.logout-btn {
+  margin-top: 48rpx; background: #fff; color: #FF4D4F;
+  border-radius: 12rpx; padding: 24rpx; text-align: center;
+  font-size: 30rpx; box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+}

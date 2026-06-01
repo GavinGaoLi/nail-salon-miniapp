@@ -1,0 +1,31 @@
+<view class="page">
+  <van-tabs active="{{activeTab}}" bind:change="onTabChange">
+    <van-tab title="今日"></van-tab>
+    <van-tab title="待确认"></van-tab>
+    <van-tab title="全部"></van-tab>
+  </van-tabs>
+
+  <view class="list">
+    <view class="card booking-item" wx:for="{{bookings}}" wx:key="id">
+      <view class="bi-top">
+        <text class="bi-customer">{{item.customer}}</text>
+        <text class="tag {{item.status==='confirmed'?'tag-success':'tag-warning'}}">{{item.statusText}}</text>
+      </view>
+      <view class="bi-info">
+        <text class="bi-service">{{item.service}}</text>
+        <text class="bi-time">{{item.date}} {{item.time}}</text>
+      </view>
+      <view class="bi-bottom">
+        <text class="bi-price">¥{{item.price}}</text>
+        <view class="bi-actions" wx:if="{{item.status==='pending'}}">
+          <view class="bi-btn confirm" bindtap="confirmBooking" data-id="{{item.id}}">确认</view>
+          <view class="bi-btn cancel" bindtap="cancelBooking" data-id="{{item.id}}">取消</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty" wx:if="{{bookings.length===0}}">
+    <text class="empty-text">暂无预约</text>
+  </view>
+</view>

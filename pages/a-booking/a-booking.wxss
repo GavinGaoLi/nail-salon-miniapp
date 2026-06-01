@@ -1,0 +1,16 @@
+.page { background: #FAFAFA; min-height: 100vh; }
+.list { padding: 24rpx 32rpx; }
+.booking-item { margin-bottom: 16rpx; }
+.bi-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12rpx; }
+.bi-customer { font-size: 30rpx; font-weight: 600; color: #1A1A1A; }
+.bi-info { margin-bottom: 12rpx; }
+.bi-service { font-size: 26rpx; color: #666; display: block; }
+.bi-time { font-size: 24rpx; color: #888; margin-top: 4rpx; display: block; }
+.bi-bottom { display: flex; justify-content: space-between; align-items: center; }
+.bi-price { font-size: 28rpx; color: #C4A882; font-weight: 600; }
+.bi-actions { display: flex; gap: 16rpx; }
+.bi-btn {
+  padding: 8rpx 24rpx; border-radius: 20rpx; font-size: 24rpx;
+}
+.bi-btn.confirm { background: #C4A882; color: #fff; }
+.bi-btn.cancel { background: #F5F0EB; color: #888; }
