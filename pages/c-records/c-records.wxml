@@ -7,7 +7,7 @@
       </view>
       <view class="ri-bottom">
         <text class="ri-date">{{item.date}} {{item.time}}</text>
-        <text class="ri-stylist">技师：{{item.stylist}}</text>
+        <text class="ri-stylist">美甲师：{{item.stylist}}</text>
       </view>
     </view>
   </view>
