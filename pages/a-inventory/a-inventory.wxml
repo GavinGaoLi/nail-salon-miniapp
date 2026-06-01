@@ -1,0 +1,41 @@
+<view class="page">
+  <!-- 分类标签 -->
+  <scroll-view scroll-x class="tag-scroll">
+    <view class="tag-item {{activeCategory===item.id?'active':''}}"
+          wx:for="{{categories}}" wx:key="id" bindtap="switchCategory" data-id="{{item.id}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <!-- 原材料列表 -->
+  <view class="list">
+    <view class="card material-item" wx:for="{{filteredMaterials}}" wx:key="id">
+      <view class="mi-left">
+        <text class="mi-name">{{item.name}}</text>
+        <text class="mi-category">{{item.categoryName}}</text>
+        <text class="mi-stock {{item.stock<=item.minStock?'low':''}}">库存：{{item.stock}}{{item.unit}}</text>
+      </view>
+      <view class="mi-right">
+        <view class="mi-btn" bindtap="editMaterial" data-id="{{item.id}}">编辑</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 添加按钮 -->
+  <view class="fab" bindtap="addMaterial">
+    <text class="fab-icon">+</text>
+  </view>
+
+  <!-- 添加/编辑弹窗 -->
+  <van-popup show="{{showPopup}}" position="bottom" round bind:close="closePopup">
+    <view class="popup-content">
+      <text class="popup-title">{{isEdit ? '编辑原材料' : '添加原材料'}}</text>
+      <van-field label="名称" placeholder="如：甲油胶-红色" value="{{form.name}}" bind:input="inputName"/>
+      <van-field label="分类" placeholder="选择分类" value="{{form.categoryName}}" bind:click="showCategoryPicker" readonly/>
+      <van-field label="库存" placeholder="数量" type="number" value="{{form.stock}}" bind:input="inputStock"/>
+      <van-field label="单位" placeholder="如：瓶/支/盒" value="{{form.unit}}" bind:input="inputUnit"/>
+      <van-field label="最低库存" placeholder="低于此数量提醒" type="number" value="{{form.minStock}}" bind:input="inputMinStock"/>
+      <view class="popup-btn" bindtap="saveMaterial">保存</view>
+    </view>
+  </van-popup>
+</view>

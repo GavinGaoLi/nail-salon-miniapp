@@ -4,30 +4,33 @@
     <text class="header-date">{{today}}</text>
   </view>
 
-  <!-- Stats Grid -->
+  <!-- Stats Grid - 全部可点击 -->
   <view class="stats-grid">
-    <view class="stat-card">
+    <view class="stat-card" bindtap="goPage" data-url="/pages/a-booking/a-booking">
       <text class="stat-num">{{todayOrders}}</text>
       <text class="stat-label">今日预约</text>
     </view>
-    <view class="stat-card">
+    <view class="stat-card" bindtap="goPage" data-url="/pages/a-income/a-income">
       <text class="stat-num">¥{{todayIncome}}</text>
       <text class="stat-label">今日收入</text>
     </view>
-    <view class="stat-card">
+    <view class="stat-card" bindtap="goPage" data-url="/pages/a-customers/a-customers">
       <text class="stat-num">{{totalCustomers}}</text>
       <text class="stat-label">客户总数</text>
     </view>
-    <view class="stat-card">
-      <text class="stat-num">{{pendingOrders}}</text>
+    <view class="stat-card" bindtap="goPage" data-url="/pages/a-booking/a-booking?tab=1">
+      <text class="stat-num pending">{{pendingOrders}}</text>
       <text class="stat-label">待确认</text>
     </view>
   </view>
 
-  <!-- Today's Bookings -->
+  <!-- 今日预约 -->
   <view class="section">
-    <text class="section-title">今日预约</text>
-    <view class="card booking-card" wx:for="{{todayList}}" wx:key="id">
+    <view class="section-header">
+      <text class="section-title">今日预约</text>
+      <text class="section-more" bindtap="goPage" data-url="/pages/a-booking/a-booking">全部 ›</text>
+    </view>
+    <view class="card booking-card" wx:for="{{todayList}}" wx:key="id" bindtap="goBookingDetail" data-id="{{item.id}}">
       <view class="bc-top">
         <text class="bc-name">{{item.customer}}</text>
         <text class="bc-time">{{item.time}}</text>
@@ -43,7 +46,7 @@
     </view>
   </view>
 
-  <!-- Admin Menu -->
+  <!-- 管理功能 -->
   <view class="section">
     <text class="section-title">管理功能</text>
     <view class="admin-grid">

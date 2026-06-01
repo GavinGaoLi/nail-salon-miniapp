@@ -25,8 +25,8 @@
       <text class="mi-text">我的预约</text>
       <text class="mi-arrow">›</text>
     </view>
-    <view class="menu-item" bindtap="goReviews">
-      <text class="mi-text">我的评价</text>
+    <view class="menu-item" bindtap="goRecords">
+      <text class="mi-text">消费记录</text>
       <text class="mi-arrow">›</text>
     </view>
     <view class="menu-item" bindtap="goPoints">

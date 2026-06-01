@@ -1,0 +1,45 @@
+<view class="page">
+  <!-- 分类标签 -->
+  <scroll-view scroll-x class="tag-scroll">
+    <view class="tag-item {{activeTag===item.id?'active':''}}" 
+          wx:for="{{tags}}" wx:key="id" bindtap="switchTag" data-id="{{item.id}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <!-- 图片瀑布流 -->
+  <view class="waterfall">
+    <view class="waterfall-left">
+      <view class="gallery-card" wx:for="{{leftList}}" wx:key="id" bindtap="previewImage" data-url="{{item.url}}">
+        <view class="gc-img" style="background:{{item.bg}}; height:{{item.height}}rpx">
+          <view class="gc-placeholder">{{item.emoji}}</view>
+        </view>
+        <view class="gc-info">
+          <text class="gc-title">{{item.title}}</text>
+          <view class="gc-stats">
+            <text class="gc-likes">♥ {{item.likes}}</text>
+            <text class="gc-source">{{item.source}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="waterfall-right">
+      <view class="gallery-card" wx:for="{{rightList}}" wx:key="id" bindtap="previewImage" data-url="{{item.url}}">
+        <view class="gc-img" style="background:{{item.bg}}; height:{{item.height}}rpx">
+          <view class="gc-placeholder">{{item.emoji}}</view>
+        </view>
+        <view class="gc-info">
+          <text class="gc-title">{{item.title}}</text>
+          <view class="gc-stats">
+            <text class="gc-likes">♥ {{item.likes}}</text>
+            <text class="gc-source">{{item.source}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty" wx:if="{{leftList.length===0 && rightList.length===0}}">
+    <text class="empty-text">暂无图片</text>
+  </view>
+</view>

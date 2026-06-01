@@ -11,10 +11,14 @@ Page({
       { name: '客户管理', icon: '👥', path: '/pages/a-customers/a-customers', bg: '#EDF5FD' },
       { name: '项目管理', icon: '💅', path: '/pages/a-projects/a-projects', bg: '#F5EDFD' },
       { name: '数据统计', icon: '📊', path: '/pages/a-stats/a-stats', bg: '#EDFDF5' },
-      { name: '库存管理', icon: '📦', path: '/pages/a-projects/a-projects', bg: '#FDEDF5' },
+      { name: '原材料', icon: '🧴', path: '/pages/a-inventory/a-inventory', bg: '#FDEDF5' },
       { name: '设置', icon: '⚙️', path: '/pages/a-settings/a-settings', bg: '#F5F5F5' }
     ]
   },
   onLoad() { this.setData({ today: new Date().toISOString().slice(0,10) }) },
-  goPage(e) { wx.navigateTo({ url: e.currentTarget.dataset.url }) }
+  goPage(e) { wx.navigateTo({ url: e.currentTarget.dataset.url }) },
+  goBookingDetail(e) {
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({ url: '/pages/a-booking-detail/a-booking-detail?id=' + id })
+  }
 })

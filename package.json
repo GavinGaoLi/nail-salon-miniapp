@@ -1,0 +1,24 @@
+     1|{
+     2|  "name": "nail-salon-miniapp",
+     3|  "version": "1.0.0",
+     4|  "description": "为美甲店打造的微信小程序，包含以下功能：",
+     5|  "main": "app.js",
+     6|  "scripts": {
+     7|    "test": "echo \"Error: no test specified\" && exit 1"
+     8|  },
+     9|  "repository": {
+    10|    "type": "git",
+    "url": "git+https://github.com/GavinGaoLi/nail-salon-miniapp.git"
+    12|  },
+    13|  "keywords": [],
+    14|  "author": "",
+    15|  "license": "ISC",
+    16|  "bugs": {
+    17|    "url": "https://github.com/GavinGaoLi/nail-salon-miniapp/issues"
+    18|  },
+    19|  "homepage": "https://github.com/GavinGaoLi/nail-salon-miniapp#readme",
+    20|  "dependencies": {
+    21|    "@vant/weapp": "^1.11.7"
+    22|  }
+    23|}
+    24|

@@ -1,0 +1,22 @@
+<view class="page">
+  <!-- 汇总 -->
+  <view class="summary">
+    <text class="summary-label">今日收入</text>
+    <text class="summary-num">¥{{totalIncome}}</text>
+  </view>
+
+  <!-- 分笔明细 -->
+  <view class="section">
+    <text class="section-title">分笔明细</text>
+    <view class="card income-item" wx:for="{{incomeList}}" wx:key="id">
+      <view class="ii-left">
+        <text class="ii-customer">{{item.customer}}</text>
+        <text class="ii-service">{{item.service}}</text>
+      </view>
+      <view class="ii-right">
+        <text class="ii-price">¥{{item.price}}</text>
+        <text class="ii-time">{{item.time}}</text>
+      </view>
+    </view>
+  </view>
+</view>

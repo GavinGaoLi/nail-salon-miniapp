@@ -12,18 +12,19 @@
   <view class="section">
     <view class="section-header">
       <text class="section-title">热门服务</text>
-      <text class="section-more" bindtap="goService">全部 ›</text>
+      <text class="section-more" bindtap="goGallery">全部 ›</text>
     </view>
     <scroll-view scroll-x class="scroll-row">
-      <view class="service-card" wx:for="{{hotServices}}" wx:key="id" bindtap="goBook">
+      <view class="service-card" wx:for="{{hotServices}}" wx:key="id">
         <view class="sc-icon">{{item.icon}}</view>
         <text class="sc-name">{{item.name}}</text>
         <text class="sc-price">¥{{item.price}}</text>
+        <view class="sc-case-btn" bindtap="goCase" data-id="{{item.id}}">案例</view>
       </view>
     </scroll-view>
   </view>
 
-  <!-- 作品展示 -->
+  <!-- 精选作品 -->
   <view class="section">
     <view class="section-header">
       <text class="section-title">精选作品</text>

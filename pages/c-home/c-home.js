@@ -13,6 +13,10 @@ Page({
       { id: 4, name: '复古格纹', bg: '#E6D3F5' }
     ]
   },
+  goCase(e) {
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({ url: '/pages/c-case/c-case?id=' + id })
+  },
   goBook() { wx.switchTab({ url: '/pages/c-book/c-book' }) },
-  goService() { wx.switchTab({ url: '/pages/c-service/c-service' }) }
+  goGallery() { wx.switchTab({ url: '/pages/c-gallery/c-gallery' }) }
 })

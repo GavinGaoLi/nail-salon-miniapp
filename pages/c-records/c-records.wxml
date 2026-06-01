@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="record-list">
+    <view class="card record-item" wx:for="{{records}}" wx:key="id">
+      <view class="ri-top">
+        <text class="ri-service">{{item.service}}</text>
+        <text class="ri-price">-¥{{item.price}}</text>
+      </view>
+      <view class="ri-bottom">
+        <text class="ri-date">{{item.date}} {{item.time}}</text>
+        <text class="ri-stylist">技师：{{item.stylist}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty" wx:if="{{records.length===0}}">
+    <text class="empty-text">暂无消费记录</text>
+  </view>
+</view>

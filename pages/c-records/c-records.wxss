@@ -1,0 +1,9 @@
+.page { background: #FAFAFA; min-height: 100vh; }
+.record-list { padding: 24rpx 32rpx; }
+.record-item { margin-bottom: 16rpx; }
+.ri-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12rpx; }
+.ri-service { font-size: 28rpx; font-weight: 600; color: #1A1A1A; }
+.ri-price { font-size: 30rpx; font-weight: 700; color: #C4A882; }
+.ri-bottom { display: flex; justify-content: space-between; }
+.ri-date { font-size: 24rpx; color: #888; }
+.ri-stylist { font-size: 24rpx; color: #888; }

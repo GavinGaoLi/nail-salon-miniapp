@@ -1,0 +1,12 @@
+.page { background: #FAFAFA; min-height: 100vh; padding: 32rpx; }
+.detail-card { margin-bottom: 32rpx; }
+.dc-row { display: flex; justify-content: space-between; align-items: center; padding: 20rpx 0; border-bottom: 1rpx solid #F5F5F5; }
+.dc-row.last { border-bottom: none; }
+.dc-label { font-size: 26rpx; color: #888; }
+.dc-value { font-size: 26rpx; color: #1A1A1A; font-weight: 500; }
+.dc-value.price { color: #C4A882; font-weight: 700; font-size: 30rpx; }
+.btn-group { display: flex; flex-direction: column; gap: 16rpx; }
+.btn-danger {
+  background: #fff; color: #FF4D4F; border-radius: 12rpx; padding: 24rpx 0;
+  text-align: center; font-size: 30rpx; border: 1rpx solid #FF4D4F;
+}

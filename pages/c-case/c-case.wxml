@@ -1,0 +1,29 @@
+<view class="page">
+  <view class="case-header">
+    <text class="case-title">{{service.name}}</text>
+    <text class="case-desc">{{service.desc}}</text>
+  </view>
+
+  <view class="section">
+    <text class="section-title">简介</text>
+    <view class="card">
+      <text class="intro-text">{{service.intro}}</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">案例展示</text>
+    <view class="case-grid">
+      <view class="case-item" wx:for="{{cases}}" wx:key="id">
+        <view class="case-img" style="background:{{item.bg}}">
+          <view class="case-img-placeholder">{{item.label}}</view>
+        </view>
+        <text class="case-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-bar">
+    <view class="btn-primary" bindtap="goBook">预约此服务 ¥{{service.price}}</view>
+  </view>
+</view>

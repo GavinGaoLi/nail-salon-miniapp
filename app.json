@@ -3,12 +3,17 @@
     "pages/startup/startup",
     "pages/c-home/c-home",
     "pages/c-book/c-book",
-    "pages/c-service/c-service",
+    "pages/c-gallery/c-gallery",
     "pages/c-mine/c-mine",
+    "pages/c-case/c-case",
+    "pages/c-records/c-records",
     "pages/a-dashboard/a-dashboard",
     "pages/a-booking/a-booking",
+    "pages/a-booking-detail/a-booking-detail",
+    "pages/a-income/a-income",
     "pages/a-customers/a-customers",
     "pages/a-projects/a-projects",
+    "pages/a-inventory/a-inventory",
     "pages/a-stats/a-stats",
     "pages/a-settings/a-settings"
   ],
@@ -37,8 +42,8 @@
         "selectedIconPath": "images/tab-book-active.png"
       },
       {
-        "pagePath": "pages/c-service/c-service",
-        "text": "服务",
+        "pagePath": "pages/c-gallery/c-gallery",
+        "text": "灵感",
         "iconPath": "images/tab-service.png",
         "selectedIconPath": "images/tab-service-active.png"
       },

@@ -13,10 +13,13 @@
   box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
 }
 .stat-num { font-size: 40rpx; font-weight: 700; color: #C4A882; display: block; }
+.stat-num.pending { color: #FAAD14; }
 .stat-label { font-size: 24rpx; color: #888; margin-top: 6rpx; display: block; }
 
 .section { padding: 0 32rpx; margin-top: 24rpx; }
-.section-title { font-size: 28rpx; font-weight: 600; color: #1A1A1A; margin-bottom: 16rpx; display: block; }
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16rpx; }
+.section-title { font-size: 28rpx; font-weight: 600; color: #1A1A1A; }
+.section-more { font-size: 26rpx; color: #C4A882; }
 
 .booking-card { margin-bottom: 12rpx; }
 .bc-top { display: flex; justify-content: space-between; }
