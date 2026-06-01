@@ -1,0 +1,109 @@
+<!--首页-->
+<view class="container">
+  <!-- 顶部欢迎区域 -->
+  <view class="header">
+    <view class="header-bg"></view>
+    <view class="header-content">
+      <view class="welcome">
+        <text class="welcome-text">💅 美甲时光</text>
+        <text class="welcome-sub">让每一天都闪闪发光</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 今日概览 -->
+  <view class="card animate-in">
+    <view class="card-title">今日概览</view>
+    <view class="stats-grid">
+      <view class="stat-item">
+        <text class="stat-value">{{todayStats.income}}</text>
+        <text class="stat-label">今日收入</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{todayStats.orders}}</text>
+        <text class="stat-label">今日订单</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{todayStats.bookings}}</text>
+        <text class="stat-label">待处理预约</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{todayStats.customers}}</text>
+        <text class="stat-label">客户总数</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 快捷操作 -->
+  <view class="card animate-in">
+    <view class="card-title">快捷操作</view>
+    <view class="quick-actions">
+      <view class="action-item" bindtap="goToBooking">
+        <view class="action-icon booking-icon">📅</view>
+        <text class="action-text">新建预约</text>
+      </view>
+      <view class="action-item" bindtap="goToCustomers">
+        <view class="action-icon customer-icon">👥</view>
+        <text class="action-text">添加客户</text>
+      </view>
+      <view class="action-item" bindtap="goToInventory">
+        <view class="action-icon inventory-icon">📦</view>
+        <text class="action-text">库存管理</text>
+      </view>
+      <view class="action-item" bindtap="goToStatistics">
+        <view class="action-icon stats-icon">📊</view>
+        <text class="action-text">查看报表</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 今日预约 -->
+  <view class="card animate-in">
+    <view class="card-title">今日预约</view>
+    <view wx:if="{{todayBookings.length > 0}}">
+      <view class="booking-item" wx:for="{{todayBookings}}" wx:key="id">
+        <view class="booking-time">{{item.time}}</view>
+        <view class="booking-info">
+          <text class="booking-customer">{{item.customerName}}</text>
+          <text class="booking-service">{{item.serviceName}}</text>
+        </view>
+        <view class="booking-artist">{{item.artistName}}</view>
+        <view class="booking-status {{item.status === 'confirmed' ? 'status-confirmed' : 'status-pending'}}">
+          {{item.status === 'confirmed' ? '已确认' : '待确认'}}
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty-state" style="padding: 40rpx;">
+      <text class="empty-icon">📭</text>
+      <text class="empty-text">今日暂无预约</text>
+    </view>
+  </view>
+
+  <!-- 最近客户 -->
+  <view class="card animate-in">
+    <view class="card-title">最近到店</view>
+    <view wx:if="{{recentCustomers.length > 0}}">
+      <view class="recent-customer" wx:for="{{recentCustomers}}" wx:key="id">
+        <view class="customer-avatar">{{item.name[0]}}</view>
+        <view class="customer-info">
+          <text class="customer-name">{{item.name}}</text>
+          <text class="customer-visits">到店 {{item.visits}} 次</text>
+        </view>
+        <text class="customer-date">{{item.lastVisit}}</text>
+      </view>
+    </view>
+    <view wx:else class="empty-state" style="padding: 40rpx;">
+      <text class="empty-icon">👤</text>
+      <text class="empty-text">暂无客户记录</text>
+    </view>
+  </view>
+
+  <!-- 库存预警 -->
+  <view class="card animate-in" wx:if="{{lowStockItems.length > 0}}">
+    <view class="card-title">⚠️ 库存预警</view>
+    <view class="low-stock-item" wx:for="{{lowStockItems}}" wx:key="id">
+      <text class="stock-name">{{item.name}}</text>
+      <text class="stock-quantity">剩余 {{item.quantity}} {{item.unit}}</text>
+    </view>
+  </view>
+</view>

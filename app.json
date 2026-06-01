@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/booking/booking",
+    "pages/customers/customers",
+    "pages/inventory/inventory",
+    "pages/statistics/statistics",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#E8879B",
+    "navigationBarTitleText": "美甲时光",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#FFF5F7",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#E8879B",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab-home.png",
+        "selectedIconPath": "images/tab-home-active.png"
+      },
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "预约",
+        "iconPath": "images/tab-booking.png",
+        "selectedIconPath": "images/tab-booking-active.png"
+      },
+      {
+        "pagePath": "pages/customers/customers",
+        "text": "客户",
+        "iconPath": "images/tab-customer.png",
+        "selectedIconPath": "images/tab-customer-active.png"
+      },
+      {
+        "pagePath": "pages/inventory/inventory",
+        "text": "库存",
+        "iconPath": "images/tab-inventory.png",
+        "selectedIconPath": "images/tab-inventory-active.png"
+      },
+      {
+        "pagePath": "pages/statistics/statistics",
+        "text": "统计",
+        "iconPath": "images/tab-stats.png",
+        "selectedIconPath": "images/tab-stats-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

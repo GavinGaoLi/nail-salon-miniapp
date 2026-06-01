@@ -1,0 +1,152 @@
+<!--预约管理页面-->
+<view class="container">
+  <!-- 顶部操作栏 -->
+  <view class="action-bar">
+    <view class="tab-group">
+      <view class="tab {{currentTab === 'list' ? 'active' : ''}}" bindtap="switchTab" data-tab="list">预约列表</view>
+      <view class="tab {{currentTab === 'new' ? 'active' : ''}}" bindtap="switchTab" data-tab="new">新建预约</view>
+    </view>
+  </view>
+
+  <!-- 预约列表 -->
+  <view wx:if="{{currentTab === 'list'}}">
+    <!-- 日期筛选 -->
+    <view class="filter-bar">
+      <picker mode="date" value="{{filterDate}}" bindchange="onDateChange">
+        <view class="date-picker">
+          <text>📅 {{filterDate || '全部日期'}}</text>
+          <text class="arrow">▼</text>
+        </view>
+      </picker>
+      <view class="filter-clear" bindtap="clearFilter" wx:if="{{filterDate}}">清除</view>
+    </view>
+
+    <!-- 预约列表 -->
+    <view wx:if="{{filteredBookings.length > 0}}">
+      <view class="booking-card animate-in" wx:for="{{filteredBookings}}" wx:key="id">
+        <view class="booking-header">
+          <view class="booking-date-time">
+            <text class="booking-date">📅 {{item.date}}</text>
+            <text class="booking-time">🕐 {{item.time}}</text>
+          </view>
+          <view class="status-badge {{item.status}}">
+            {{item.status === 'confirmed' ? '已确认' : item.status === 'pending' ? '待确认' : '已完成'}}
+          </view>
+        </view>
+        <view class="booking-body">
+          <view class="info-row">
+            <text class="info-label">👤 客户</text>
+            <text class="info-value">{{item.customerName}}</text>
+          </view>
+          <view class="info-row">
+            <text class="info-label">💅 服务</text>
+            <text class="info-value">{{item.serviceName}}</text>
+          </view>
+          <view class="info-row">
+            <text class="info-label">👩‍🎨 美甲师</text>
+            <text class="info-value">{{item.artistName}}</text>
+          </view>
+        </view>
+        <view class="booking-actions">
+          <view wx:if="{{item.status === 'pending'}}" class="action-btn confirm-btn" bindtap="confirmBooking" data-id="{{item.id}}">确认</view>
+          <view wx:if="{{item.status !== 'completed'}}" class="action-btn complete-btn" bindtap="completeBooking" data-id="{{item.id}}">完成</view>
+          <view class="action-btn cancel-btn" bindtap="cancelBooking" data-id="{{item.id}}">取消</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty-state">
+      <text class="empty-icon">📭</text>
+      <text class="empty-text">暂无预约记录</text>
+    </view>
+  </view>
+
+  <!-- 新建预约表单 -->
+  <view wx:if="{{currentTab === 'new'}}" class="form-container">
+    <view class="card">
+      <view class="card-title">预约信息</view>
+      
+      <!-- 选择客户 -->
+      <view class="form-group">
+        <text class="form-label">选择客户</text>
+        <picker mode="selector" range="{{customerNames}}" value="{{selectedCustomerIndex}}" bindchange="onCustomerSelect">
+          <view class="form-picker">
+            <text>{{selectedCustomerName || '请选择客户'}}</text>
+            <text class="arrow">▼</text>
+          </view>
+        </picker>
+      </view>
+
+      <!-- 或输入新客户信息 -->
+      <view class="form-group" wx:if="{{selectedCustomerIndex === -1}}">
+        <text class="form-label">客户姓名</text>
+        <input class="form-input" placeholder="请输入客户姓名" value="{{newCustomerName}}" bindinput="onInput" data-field="newCustomerName" />
+      </view>
+      <view class="form-group" wx:if="{{selectedCustomerIndex === -1}}">
+        <text class="form-label">客户手机</text>
+        <input class="form-input" type="number" placeholder="请输入手机号" value="{{newCustomerPhone}}" bindinput="onInput" data-field="newCustomerPhone" />
+      </view>
+
+      <!-- 选择服务 -->
+      <view class="form-group">
+        <text class="form-label">服务项目</text>
+        <picker mode="selector" range="{{serviceNames}}" value="{{selectedServiceIndex}}" bindchange="onServiceSelect">
+          <view class="form-picker">
+            <text>{{selectedServiceName || '请选择服务项目'}}</text>
+            <text class="arrow">▼</text>
+          </view>
+        </picker>
+      </view>
+
+      <!-- 服务价格显示 -->
+      <view class="form-group" wx:if="{{selectedService}}">
+        <view class="price-display">
+          <text class="price-label">服务价格</text>
+          <text class="price-value">¥{{selectedService.price}}</text>
+          <text class="price-duration">约{{selectedService.duration}}分钟</text>
+        </view>
+      </view>
+
+      <!-- 选择美甲师 -->
+      <view class="form-group">
+        <text class="form-label">选择美甲师</text>
+        <picker mode="selector" range="{{artistNames}}" value="{{selectedArtistIndex}}" bindchange="onArtistSelect">
+          <view class="form-picker">
+            <text>{{selectedArtistName || '请选择美甲师'}}</text>
+            <text class="arrow">▼</text>
+          </view>
+        </picker>
+      </view>
+
+      <!-- 选择日期 -->
+      <view class="form-group">
+        <text class="form-label">预约日期</text>
+        <picker mode="date" value="{{bookingDate}}" start="{{today}}" bindchange="onDateInput">
+          <view class="form-picker">
+            <text>{{bookingDate || '请选择日期'}}</text>
+            <text class="arrow">▼</text>
+          </view>
+        </picker>
+      </view>
+
+      <!-- 选择时间 -->
+      <view class="form-group">
+        <text class="form-label">预约时间</text>
+        <picker mode="selector" range="{{timeSlots}}" value="{{selectedTimeIndex}}" bindchange="onTimeSelect">
+          <view class="form-picker">
+            <text>{{bookingTime || '请选择时间'}}</text>
+            <text class="arrow">▼</text>
+          </view>
+        </picker>
+      </view>
+
+      <!-- 备注 -->
+      <view class="form-group">
+        <text class="form-label">备注</text>
+        <textarea class="form-textarea" placeholder="如有特殊需求请备注" value="{{bookingNotes}}" bindinput="onInput" data-field="bookingNotes" />
+      </view>
+
+      <!-- 提交按钮 -->
+      <button class="btn-primary btn-block" bindtap="submitBooking">确认预约</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,204 @@
+/* 库存管理页面样式 */
+
+.category-scroll {
+  white-space: nowrap;
+  margin-bottom: 24rpx;
+}
+
+.category-chip {
+  display: inline-block;
+  padding: 14rpx 28rpx;
+  background: #FFFFFF;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #666666;
+  margin-right: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+}
+
+.category-chip.active {
+  background: linear-gradient(135deg, #E8879B, #C96B7F);
+  color: #FFFFFF;
+}
+
+/* 统计栏 */
+.stats-bar {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.stat-chip {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 16rpx;
+  text-align: center;
+  box-shadow: 0 4rpx 16rpx rgba(232, 135, 155, 0.15);
+}
+
+.stat-chip.warning {
+  background: #FFF3E0;
+}
+
+.stat-chip-value {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #E8879B;
+}
+
+.stat-chip.warning .stat-chip-value {
+  color: #E6A23C;
+}
+
+.stat-chip-label {
+  display: block;
+  font-size: 22rpx;
+  color: #999999;
+  margin-top: 4rpx;
+}
+
+/* 库存卡片 */
+.inventory-card {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(232, 135, 155, 0.15);
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20rpx;
+}
+
+.inventory-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333333;
+  display: block;
+}
+
+.inventory-category {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 4rpx;
+}
+
+.stock-badge {
+  font-size: 22rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+}
+
+.stock-badge.normal {
+  background: #E8F5E9;
+  color: #67C23A;
+}
+
+.stock-badge.low {
+  background: #FFEBEE;
+  color: #F56C6C;
+}
+
+/* 库存详情 */
+.inventory-body {
+  margin-bottom: 20rpx;
+}
+
+.inventory-row {
+  display: flex;
+  gap: 16rpx;
+}
+
+.inventory-stat {
+  flex: 1;
+  background: #FFF5F7;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  text-align: center;
+}
+
+.inventory-stat .stat-label {
+  display: block;
+  font-size: 22rpx;
+  color: #999999;
+  margin-bottom: 8rpx;
+}
+
+.inventory-stat .stat-value {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.text-danger {
+  color: #F56C6C !important;
+}
+
+/* 操作按钮 */
+.inventory-actions {
+  display: flex;
+  gap: 16rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #F0E0E4;
+}
+
+.action-btn {
+  flex: 1;
+  text-align: center;
+  padding: 14rpx 0;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+}
+
+.add-btn {
+  background: #E8F5E9;
+  color: #67C23A;
+}
+
+.reduce-btn {
+  background: #FFF3E0;
+  color: #E6A23C;
+}
+
+.edit-btn {
+  background: #E3F2FD;
+  color: #1976D2;
+}
+
+/* 库存变动弹窗 */
+.stock-change-info {
+  text-align: center;
+  margin-bottom: 24rpx;
+}
+
+.stock-item-name {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+
+.stock-current {
+  display: block;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+/* 表单行 */
+.form-row {
+  display: flex;
+  gap: 20rpx;
+}
+
+.form-group.half {
+  flex: 1;
+}

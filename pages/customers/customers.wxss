@@ -1,0 +1,205 @@
+/* 客户管理页面样式 */
+
+.stats-bar {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 24rpx;
+}
+
+.stat-chip {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  text-align: center;
+  box-shadow: 0 4rpx 16rpx rgba(232, 135, 155, 0.15);
+}
+
+.stat-chip-value {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #E8879B;
+}
+
+.stat-chip-label {
+  display: block;
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 4rpx;
+}
+
+/* 客户卡片 */
+.customer-card {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(232, 135, 155, 0.15);
+}
+
+.customer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.customer-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E8879B, #D4A574);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-right: 20rpx;
+}
+
+.customer-main {
+  flex: 1;
+}
+
+.customer-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.customer-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.vip-badge {
+  font-size: 20rpx;
+  padding: 4rpx 12rpx;
+  background: linear-gradient(135deg, #D4A574, #E8C9A8);
+  color: #FFFFFF;
+  border-radius: 10rpx;
+  font-weight: 500;
+}
+
+.customer-phone {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 4rpx;
+}
+
+.customer-visits {
+  text-align: center;
+}
+
+.visits-count {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #E8879B;
+}
+
+.visits-label {
+  display: block;
+  font-size: 22rpx;
+  color: #999999;
+}
+
+.customer-preferences {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 1rpx solid #F0E0E4;
+}
+
+.customer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer-spent {
+  font-size: 26rpx;
+  color: #E8879B;
+  font-weight: 500;
+}
+
+.customer-date {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+/* 颜色/款式选项 */
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.color-option {
+  padding: 12rpx 24rpx;
+  background: #FFF5F7;
+  border: 2rpx solid #F0E0E4;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #666666;
+  transition: all 0.2s;
+}
+
+.color-option.selected {
+  background: #E8879B;
+  border-color: #E8879B;
+  color: #FFFFFF;
+}
+
+/* 表单文本域 */
+.form-textarea {
+  width: 100%;
+  height: 160rpx;
+  background: #FFF5F7;
+  border: 2rpx solid #F0E0E4;
+  border-radius: 16rpx;
+  padding: 20rpx 24rpx;
+  font-size: 28rpx;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+/* 详情弹窗 */
+.detail-section {
+  margin-bottom: 20rpx;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #F0E0E4;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 26rpx;
+  color: #666666;
+  min-width: 140rpx;
+}
+
+.detail-value {
+  font-size: 26rpx;
+  color: #333333;
+  text-align: right;
+  flex: 1;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8rpx;
+}
