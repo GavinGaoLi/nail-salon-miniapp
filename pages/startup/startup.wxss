@@ -1,0 +1,31 @@
+.page {
+  min-height: 100vh; background: linear-gradient(180deg, #F5F0EB 0%, #FFFFFF 60%);
+  display: flex; flex-direction: column; align-items: center; padding: 0 48rpx;
+}
+.hero { display: flex; flex-direction: column; align-items: center; margin-top: 200rpx; margin-bottom: 120rpx; }
+.logo-ring {
+  width: 140rpx; height: 140rpx; border-radius: 50%; border: 3rpx solid #C4A882;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 32rpx;
+}
+.logo-inner { font-size: 56rpx; font-weight: 300; color: #C4A882; letter-spacing: 2rpx; }
+.brand { font-size: 36rpx; font-weight: 300; letter-spacing: 12rpx; color: #1A1A1A; margin-bottom: 12rpx; }
+.slogan { font-size: 24rpx; color: #888; letter-spacing: 4rpx; }
+.actions { width: 100%; display: flex; flex-direction: column; gap: 24rpx; }
+.role-card {
+  background: #fff; border-radius: 20rpx; padding: 36rpx 32rpx;
+  display: flex; align-items: center; box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.04);
+}
+.role-icon-wrap {
+  width: 80rpx; height: 80rpx; border-radius: 16rpx;
+  display: flex; align-items: center; justify-content: center; margin-right: 24rpx;
+}
+.role-icon-wrap.customer { background: #F5F0EB; }
+.role-icon-wrap.admin { background: #EBF0F5; }
+.role-icon { font-size: 32rpx; font-weight: 600; }
+.role-icon-wrap.customer .role-icon { color: #C4A882; }
+.role-icon-wrap.admin .role-icon { color: #5B7A99; }
+.role-info { flex: 1; }
+.role-name { font-size: 30rpx; font-weight: 600; color: #1A1A1A; display: block; margin-bottom: 6rpx; }
+.role-desc { font-size: 24rpx; color: #888; display: block; }
+.arrow { font-size: 40rpx; color: #CCC; font-weight: 300; }
+.footer { position: fixed; bottom: 60rpx; font-size: 22rpx; color: #CCC; letter-spacing: 2rpx; }

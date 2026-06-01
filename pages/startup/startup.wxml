@@ -1,0 +1,28 @@
+<view class="page">
+  <view class="hero">
+    <view class="logo-ring">
+      <view class="logo-inner">N</view>
+    </view>
+    <text class="brand">NAIL STUDIO</text>
+    <text class="slogan">指尖上的艺术</text>
+  </view>
+  <view class="actions">
+    <view class="role-card" bindtap="enterCustomer">
+      <view class="role-icon-wrap customer"><text class="role-icon">C</text></view>
+      <view class="role-info">
+        <text class="role-name">顾客入口</text>
+        <text class="role-desc">浏览服务 · 在线预约 · 查看记录</text>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+    <view class="role-card" bindtap="enterAdmin">
+      <view class="role-icon-wrap admin"><text class="role-icon">A</text></view>
+      <view class="role-info">
+        <text class="role-name">店主管理</text>
+        <text class="role-desc">预约管理 · 客户管理 · 数据统计</text>
+      </view>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+  <text class="footer">v1.0.0</text>
+</view>
