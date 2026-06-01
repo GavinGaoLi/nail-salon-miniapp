@@ -18,5 +18,5 @@ Page({
     wx.navigateTo({ url: '/pages/c-case/c-case?id=' + id })
   },
   goBook() { wx.switchTab({ url: '/pages/c-book/c-book' }) },
-  goGallery() { wx.switchTab({ url: '/pages/c-gallery/c-gallery' }) }
+  goServices() { wx.navigateTo({ url: '/pages/c-services/c-services' }) }
 })

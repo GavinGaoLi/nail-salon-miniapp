@@ -3,6 +3,7 @@
     "pages/startup/startup",
     "pages/c-home/c-home",
     "pages/c-book/c-book",
+    "pages/c-services/c-services",
     "pages/c-gallery/c-gallery",
     "pages/c-mine/c-mine",
     "pages/c-case/c-case",
@@ -31,25 +32,25 @@
     "list": [
       {
         "pagePath": "pages/c-home/c-home",
-        "text": "首页",
+        "text": "\u9996\u9875",
         "iconPath": "images/tab-home.png",
         "selectedIconPath": "images/tab-home-active.png"
       },
       {
         "pagePath": "pages/c-book/c-book",
-        "text": "预约",
+        "text": "\u9884\u7ea6",
         "iconPath": "images/tab-book.png",
         "selectedIconPath": "images/tab-book-active.png"
       },
       {
         "pagePath": "pages/c-gallery/c-gallery",
-        "text": "灵感",
+        "text": "\u7075\u611f",
         "iconPath": "images/tab-service.png",
         "selectedIconPath": "images/tab-service-active.png"
       },
       {
         "pagePath": "pages/c-mine/c-mine",
-        "text": "我的",
+        "text": "\u6211\u7684",
         "iconPath": "images/tab-mine.png",
         "selectedIconPath": "images/tab-mine-active.png"
       }

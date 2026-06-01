@@ -1,19 +1,7 @@
 {
   "libVersion": "3.16.1",
   "projectname": "nail-salon-miniapp",
-  "condition": {
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/a-dashboard/a-dashboard",
-          "pathName": "pages/a-dashboard/a-dashboard",
-          "query": "",
-          "scene": null,
-          "launchMode": "default"
-        }
-      ]
-    }
-  },
+  "condition": {},
   "setting": {
     "urlCheck": true,
     "coverView": true,

@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="service-list">
+    <view class="card service-item" wx:for="{{services}}" wx:key="id">
+      <view class="si-top">
+        <view class="si-icon-wrap" style="background:{{item.bg}}">
+          <text class="si-icon">{{item.icon}}</text>
+        </view>
+        <view class="si-info">
+          <text class="si-name">{{item.name}}</text>
+          <text class="si-desc">{{item.desc}}</text>
+          <text class="si-time">约{{item.duration}}分钟</text>
+        </view>
+        <text class="si-price">¥{{item.price}}</text>
+      </view>
+      <view class="si-actions">
+        <view class="si-btn case" bindtap="goCase" data-id="{{item.id}}">查看案例</view>
+        <view class="si-btn book" bindtap="goBook">立即预约</view>
+      </view>
+    </view>
+  </view>
+</view>

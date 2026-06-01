@@ -12,7 +12,7 @@
   <view class="section">
     <view class="section-header">
       <text class="section-title">热门服务</text>
-      <text class="section-more" bindtap="goGallery">全部 ›</text>
+      <text class="section-more" bindtap="goServices">全部 ›</text>
     </view>
     <scroll-view scroll-x class="scroll-row">
       <view class="service-card" wx:for="{{hotServices}}" wx:key="id">
